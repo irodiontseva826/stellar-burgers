@@ -14,11 +14,11 @@ import styles from './app.module.css';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { AppHeader, IngredientDetails, Modal, OrderInfo } from '@components';
 import { ProtectedRoute } from '../protected-route';
-import { useDispatch } from '../../services/store';
+import { useDispatch } from '../../services/store/store';
 import { useEffect } from 'react';
-import { getIngredients } from '../../services/slices/ingredientsSlice';
+import { getIngredients } from '../../services/slices/ingredientsSlice/ingredientsSlice';
 import { ComponentInCenter } from '../component-in-center/component-in-center';
-import { getUser } from '../../services/slices/userSlice';
+import { getUser } from '../../services/slices/userSlice/userSlice';
 
 const App = () => {
   const dispatch = useDispatch();

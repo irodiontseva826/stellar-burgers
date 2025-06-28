@@ -1,6 +1,6 @@
 import React from 'react';
-import { useSelector } from '../../services/store';
-import { getUserState } from '../../services/slices/userSlice';
+import { useSelector } from '../../services/store/store';
+import { getUserState } from '../../services/slices/userSlice/userSlice';
 import { Preloader } from '@ui';
 import { Navigate, useLocation } from 'react-router-dom';
 

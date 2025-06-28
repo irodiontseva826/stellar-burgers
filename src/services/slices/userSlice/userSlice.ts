@@ -9,7 +9,7 @@ import {
 } from '@api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TUser } from '@utils-types';
-import { deleteCookie, setCookie } from '../../utils/cookie';
+import { deleteCookie, setCookie } from '../../../utils/cookie';
 
 export const registerUser = createAsyncThunk(
   'user/register',
@@ -30,13 +30,13 @@ export const updateUser = createAsyncThunk(
 
 export const logoutUser = createAsyncThunk('user/logout', logoutApi);
 
-type TUserState = {
+export type TUserState = {
   user: TUser | null;
   loading: boolean;
   error: string | null;
 };
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   user: null,
   loading: false,
   error: null

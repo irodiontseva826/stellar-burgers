@@ -6,7 +6,7 @@ export const getFeeds = createAsyncThunk('feeds/getAll', getFeedsApi);
 
 export const getOrders = createAsyncThunk('orders/getAll', getOrdersApi);
 
-type TFeedState = {
+export type TFeedState = {
   orders: TOrder[];
   total: number;
   totalToday: number;
@@ -14,7 +14,7 @@ type TFeedState = {
   error: string | null;
 };
 
-const initialState: TFeedState = {
+export const initialState: TFeedState = {
   orders: [],
   total: 0,
   totalToday: 0,

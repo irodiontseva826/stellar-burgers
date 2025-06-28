@@ -1,13 +1,13 @@
 import { FC, useMemo } from 'react';
 import { TConstructorIngredient } from '@utils-types';
 import { BurgerConstructorUI } from '@ui';
-import { useDispatch, useSelector } from '../../services/store';
+import { useDispatch, useSelector } from '../../services/store/store';
 import {
   clearOrder,
   getConstructorState,
   submitOrder
-} from '../../services/slices/constructorSlice';
-import { getUserState } from '../../services/slices/userSlice';
+} from '../../services/slices/constructorSlice/constructorSlice';
+import { getUserState } from '../../services/slices/userSlice/userSlice';
 import { useNavigate } from 'react-router-dom';
 
 export const BurgerConstructor: FC = () => {
