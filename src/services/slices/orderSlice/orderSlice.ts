@@ -7,13 +7,13 @@ export const getOrderByNumber = createAsyncThunk(
   (number: number) => getOrderByNumberApi(number)
 );
 
-type TOrderState = {
+export type TOrderState = {
   order: TOrder | null;
   loading: boolean;
   error: string | null;
 };
 
-const initialState: TOrderState = {
+export const initialState: TOrderState = {
   order: null,
   loading: false,
   error: null

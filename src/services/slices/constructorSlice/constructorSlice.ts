@@ -11,7 +11,7 @@ export const submitOrder = createAsyncThunk('order/submit', (data: string[]) =>
   orderBurgerApi(data)
 );
 
-type TConstructorsState = {
+export type TConstructorsState = {
   constructorItems: {
     bun: TConstructorIngredient | null;
     ingredients: TConstructorIngredient[];
@@ -22,7 +22,7 @@ type TConstructorsState = {
   error: string | null;
 };
 
-const initialState: TConstructorsState = {
+export const initialState: TConstructorsState = {
   constructorItems: {
     bun: null,
     ingredients: []
